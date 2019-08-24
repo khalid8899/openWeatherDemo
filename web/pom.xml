@@ -1,0 +1,355 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com</groupId>
+  <artifactId>web</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>web</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+
+              <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+              <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+              <cucumber.reporting.version>0.1.0</cucumber.reporting.version>
+
+              <maven.cucumber.reporting.version>0.0.6</maven.cucumber.reporting.version>
+
+              <org.testng.testng.version>6.8.13</org.testng.testng.version>
+
+              <info.cukes.cucumber-testng.version>1.2.5</info.cukes.cucumber-testng.version>
+
+              <info.cukes.cucumber-java.version>1.2.5</info.cukes.cucumber-java.version>
+
+
+              <org.seleniumhq.selenium.selenium-server.version>2.48.2</org.seleniumhq.selenium.selenium-server.version>
+
+              <org.codehaus.mojo.exec-maven-plugin.version>1.2.1</org.codehaus.mojo.exec-maven-plugin.version>
+
+              <org.apache.maven.plugins.maven-compiler-plugin.version>3.1</org.apache.maven.plugins.maven-compiler-plugin.version>
+
+              <org.apache.maven.plugins.maven-surefire-plugin.version>2.18.1</org.apache.maven.plugins.maven-surefire-plugin.version>
+
+              <info.cukes.cucumber-jvm-deps.version>1.0.5</info.cukes.cucumber-jvm-deps.version>
+
+              <source.and.target.JVM.version>1.6</source.and.target.JVM.version>
+
+              <log4j.log4j.version>1.2.17</log4j.log4j.version>
+
+              <com.google.guava.version>18.0</com.google.guava.version>
+
+              <surefire.fork.count>5</surefire.fork.count>
+
+
+       </properties>
+
+       <dependencies>
+
+           <dependency>
+
+       <groupId>io.rest-assured</groupId>
+
+       <artifactId>rest-assured</artifactId>
+
+       <version>3.0.2</version>   
+
+              </dependency>
+              
+     <dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+     </dependency>
+
+              <dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>	
+			<version>${log4j.log4j.version}</version>
+			<scope>compile</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.mail</groupId>
+					<artifactId>mail</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+       <dependency>
+
+  <groupId>org.apache.poi</groupId>
+
+  <artifactId>poi-ooxml</artifactId>
+
+  <version>3.15</version>
+
+</dependency>
+
+<dependency>
+
+    <groupId>net.sourceforge.jexcelapi</groupId>
+
+    <artifactId>jxl</artifactId>
+
+    <version>2.6</version>
+
+</dependency>
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>gherkin</artifactId>
+    <version>2.12.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+
+    <groupId>javax.mail</groupId>
+
+    <artifactId>mail</artifactId>
+
+    <version>1.4</version>
+
+</dependency>
+
+<dependency>
+
+    <groupId>org.json</groupId>
+
+    <artifactId>json</artifactId>
+
+    <version>20180130</version>
+
+</dependency>
+
+<dependency>
+
+    <groupId>com.googlecode.json-simple</groupId>
+
+    <artifactId>json-simple</artifactId>
+
+    <version>1.1.1</version>
+
+</dependency>
+
+<dependency>
+
+<groupId>net.sf.opencsv</groupId>
+
+<artifactId>opencsv</artifactId>
+
+<version>2.3</version>
+
+</dependency>
+
+<dependency>
+
+                    <groupId>net.sourceforge.jtds</groupId>
+
+                    <artifactId>jtds</artifactId>
+
+                    <version>1.3.1</version>
+
+              </dependency>
+
+              <dependency>
+
+                     <groupId>info.cukes</groupId>
+
+                     <artifactId>cucumber-jvm-deps</artifactId>
+
+                     <version>${info.cukes.cucumber-jvm-deps.version}</version>
+
+                     <exclusions>
+
+                           <exclusion>
+
+                                  <groupId>com.thoughtworks.xstream</groupId>
+
+                                  <artifactId>xstream</artifactId>
+
+                           </exclusion>
+
+                           <exclusion>
+
+                                  <groupId>com.googlecode.java-diff-utils</groupId>
+
+                                  <artifactId>diffutils</artifactId>
+
+                           </exclusion>
+
+                     </exclusions>
+
+              </dependency>
+<dependency>
+
+                     <groupId>org.testng</groupId>
+
+                     <artifactId>testng</artifactId>
+
+                     <version>${org.testng.testng.version}</version>
+
+                     <scope>compile</scope>
+
+              </dependency>
+              <dependency>
+
+                     <groupId>info.cukes</groupId>
+
+                     <artifactId>cucumber-testng</artifactId>
+
+                     <version>${info.cukes.cucumber-testng.version}</version>
+
+                  </dependency>
+             
+
+              <dependency>
+
+                     <groupId>info.cukes</groupId>
+
+                     <artifactId>cucumber-java</artifactId>
+
+                     <version>${info.cukes.cucumber-java.version}</version>
+
+                     <scope>test</scope>
+
+              </dependency>
+
+             
+
+             
+              <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+</dependency>
+              <dependency>
+                     <groupId>org.seleniumhq.selenium</groupId>
+                     <artifactId>selenium-java</artifactId>
+                     <version>${org.seleniumhq.selenium.selenium-server.version}</version>
+              </dependency>
+              <dependency>
+                     <groupId>org.seleniumhq.selenium</groupId>
+                     <artifactId>selenium-server</artifactId>
+                     <version>${org.seleniumhq.selenium.selenium-server.version}</version>
+              </dependency>
+              <dependency>
+                     <artifactId>guava</artifactId>
+                     <groupId>com.google.guava</groupId>
+                     <version>${com.google.guava.version}</version>
+              </dependency>
+              
+              
+              <dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>maven-cucumber-reporting</artifactId>
+			<version>${maven.cucumber.reporting.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>${cucumber.reporting.version}</version>
+		</dependency>
+		
+		<dependency>
+			<!-- Required by JSONReportMerger -->
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<!-- adding here-->
+		
+		
+<dependency>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+<version>4.12</version>
+<scope>test</scope>
+</dependency>
+
+<dependency>
+<groupId>info.cukes</groupId>
+<artifactId>cucumber-java</artifactId>
+<version>1.2.5</version>
+</dependency>
+
+<dependency>
+<groupId>info.cukes</groupId>
+<artifactId>cucumber-jvm-deps</artifactId>
+<version>1.0.5</version>
+<scope>provided</scope>
+</dependency>
+
+<dependency>
+<groupId>info.cukes</groupId>
+<artifactId>cucumber-junit</artifactId>
+<version>1.2.5</version>
+<scope>test</scope>
+</dependency>
+
+		<!--end-->
+		
+		</dependencies>
+		
+		<build>
+		<plugins>
+		<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>${org.codehaus.mojo.exec-maven-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>merge-cucumber-json-reports</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<classpathScope>test</classpathScope>
+							<mainClass>cucumber.jvm.parallel.JSONReportMerger</mainClass>
+							<arguments>
+								<argument>${project.build.directory}/json/</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>${maven.cucumber.reporting.version}</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>acceptance-tests</projectName>
+							<outputDirectory>${project.build.directory}/cucumber-htmlreports</outputDirectory>
+							<cucumberOutput>${project.build.directory}/consolidated-json/cucumber.json</cucumberOutput>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			</plugins>
+			</build>
+
+</project>
