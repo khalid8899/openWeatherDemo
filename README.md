@@ -49,7 +49,14 @@ Reports:
 2)	Reports will be generated in Test Ng result format on console.
 3)	You can also go to target folder for different reports format.
 
-	
+Framework details:
+
+1) Framework is divided into 3 parts
+   1)Cucumber feature file
+   2)Step definition class
+   3)Page object class
+2)Single specific feature can be tested by providing cucumber tag inside test runner class(under tag option).
+3)Feature file is inside feature folder, tag details is present for all the test cases as well as common tag to run all scripts.
 
 
 
